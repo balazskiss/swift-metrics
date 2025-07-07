@@ -75,6 +75,7 @@ extension Timer {
     }
 }
 
+#if !os(Linux)
 extension Timer {
     /// Convenience for recording a duration based on ``Duration``.
     ///
@@ -96,3 +97,4 @@ extension Timer {
         self.recordNanoseconds(nanoseconds.partialValue)
     }
 }
+#endif
